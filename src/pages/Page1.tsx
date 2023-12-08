@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 
-const langs = ["en", "cn"];
+const langs = ["fr", "en", "cn"];
 
 const Page1 = () => {
   const { t, i18n } = useTranslation();
