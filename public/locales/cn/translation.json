@@ -1,7 +1,20 @@
 {
-  "title": "Willkommen zu react und react-i18next",
-  "description": {
-    "part1": "Um loszulegen, ändere <1>src/App(DE).js</1> und speichere um neuzuladen.",
-    "part2": "Wechsle die Sprache zwischen deutsch und englisch mit Hilfe der beiden Schalter."
+  "header": "JavaScript 简介",
+  "part1": {
+    "subTitle": "什么是 JavaScript？",
+    "details": [
+      "JavaScript 最初被创建的目的是“使网页更生动”。",
+      "这种编程语言写出来的程序被称为 脚本。它们可以被直接写在网页的 HTML 中，在页面加载的时候自动执行。",
+      "脚本被以纯文本的形式提供和执行。它们不需要特殊的准备或编译即可运行。",
+      "这方面，JavaScript 和 Java 有很大的区别。"
+    ]
+  },
+  "part2": {
+    "subTitle": "浏览器中的 JavaScript 能做什么？",
+    "details": [
+      "现代的 JavaScript 是一种“安全的”编程语言。它不提供对内存或 CPU 的底层访问，因为它最初是为浏览器创建的，不需要这些功能。",
+      "JavaScript 的能力很大程度上取决于它运行的环境。例如，Node.js 支持允许 JavaScript 读取/写入任意文件，执行网络请求等的函数。",
+      "浏览器中的 JavaScript 可以做与网页操作、用户交互和 Web 服务器相关的所有事情。"
+    ]
   }
 }
