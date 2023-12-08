@@ -1,11 +1,7 @@
 import "./App.css";
-import { useTranslation } from "react-i18next";
 import Page1 from "./pages/Page1";
 
-const langs = ["en", "cn"];
-
 function App() {
-  const { t, i18n } = useTranslation();
   return (
     <div className="app flex flex-col">
       <Page1 />
