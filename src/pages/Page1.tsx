@@ -23,10 +23,13 @@ const Page1 = () => {
         })}
       </nav>
 
-      <section className="w-[800px]">
+      <section className="w-[800px] flex-1">
         <div>
           <span className="text-blue-600"> language now：</span>
-          <span className="text-amber-600"> {i18n.language}</span>
+          <span className="text-amber-600 font-bold text-xl">
+            {" "}
+            {i18n.language}
+          </span>
         </div>
 
         <div className="font-bold text-4xl text-gray-600 mb-3">
@@ -44,6 +47,12 @@ const Page1 = () => {
           );
         })}
       </section>
+
+      <footer>
+        <a href="https://github.com/Fizzbow/libraries_demo" target="_blank">
+          github source code
+        </a>{" "}
+      </footer>
     </main>
   );
 };
