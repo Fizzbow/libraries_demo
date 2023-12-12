@@ -1,0 +1,31 @@
+
+.toggle{
+    height: 30px;
+    width: 28px;
+    gap: 4px;
+    position: fixed;
+    z-index: 2;
+}
+.toggle.on .one{
+    transform: rotate(45deg) ;
+    transform-origin: left top;
+}
+.toggle.on .two{
+    opacity: 0;
+}
+.toggle.on .three{
+    transform: rotate(-45deg);
+    transform-origin: left bottom;
+}
+.menu{
+    width: 30%;
+    height: 400px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate(-100%,-100%);
+    background-color: bisque;
+}
+.menu.on{
+    transform: translate(0);
+}

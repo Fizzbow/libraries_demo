@@ -1,15 +1,53 @@
 import { useTranslation } from "react-i18next";
+import "./toggle.scss";
 
 const langs = ["fr", "en", "cn"];
 
+const languages = [
+  {
+    id: "en",
+    name: "English",
+  },
+  {
+    id: "cn",
+    name: "中文",
+  },
+  {
+    id: "fr",
+    name: "Français",
+  },
+];
+
 const Page1 = () => {
   const { t, i18n } = useTranslation();
+
+  function toggle() {
+    const toggle = document.querySelector(".toggle");
+
+    toggle?.classList.toggle("on");
+  }
+
   return (
     <main
-      className="app-content flex flex-col h-full p-20"
+      className="app-content flex flex-col h-full p-10"
       style={{ alignItems: "center" }}
     >
-      <nav className="flex w-full flex-row-reverse">
+      <header className="flex mb-6 relative w-full flex-row-reverse items-center">
+        <div
+          className="toggle cursor-pointer flex flex-col"
+          onClick={() => toggle()}
+        >
+          {["one", "two", "three"].map((cla) => {
+            return (
+              <div
+                className={`${cla} h-[5px] bg-blue-600 rounded-sm transition-all`}
+                key={cla}
+              />
+            );
+          })}
+        </div>
+      </header>
+      <div className="menu ">
         {langs.map((i) => {
           return (
             <button
@@ -21,7 +59,7 @@ const Page1 = () => {
             </button>
           );
         })}
-      </nav>
+      </div>
 
       <section className="w-[800px] flex-1">
         <div>
@@ -51,7 +89,7 @@ const Page1 = () => {
       <footer>
         <a href="https://github.com/Fizzbow/libraries_demo" target="_blank">
           github source code
-        </a>{" "}
+        </a>
       </footer>
     </main>
   );
