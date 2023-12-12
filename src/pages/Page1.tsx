@@ -55,7 +55,7 @@ const Page1 = () => {
             return (
               <div
                 key={id}
-                className="menu-item relative before:transition-transform transition-colors  mx-4 text-3xl font-bold my-2 cursor-pointer text-grays"
+                className="menu-item relative transition-colors  mx-4 text-3xl font-bold my-2 cursor-pointer text-grays"
                 onClick={() => {
                   i18n.changeLanguage(id);
                 }}
