@@ -55,9 +55,9 @@ const Page1 = () => {
             return (
               <div
                 key={id}
-                className="mx-4 text-3xl font-bold my-2 cursor-pointer text-white hover:bg-[#FCBB25]"
+                className="menu-item relative before:transition-transform transition-colors  mx-4 text-3xl font-bold my-2 cursor-pointer text-grays"
                 onClick={() => {
-                  i18n.changeLanguage(id), toggle();
+                  i18n.changeLanguage(id);
                 }}
               >
                 {name}
@@ -70,10 +70,7 @@ const Page1 = () => {
       <section className="w-[800px] flex-1">
         <div>
           <span className="text-blue"> language now：</span>
-          <span className="text-yellow font-bold text-xl">
-            {" "}
-            {i18n.language}
-          </span>
+          <span className="text-yellow font-bold text-xl">{i18n.language}</span>
         </div>
 
         <div className="font-bold text-4xl text-gray mb-3">{t("header")}</div>

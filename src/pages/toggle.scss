@@ -21,7 +21,7 @@
     transform: rotate(-45deg);
     transform-origin: left bottom;
 }
-.menu{
+.menu {
     width: 20%;
     height: 400px;
     position: absolute;
@@ -30,7 +30,27 @@
     transform: translateX(100%);
     transform-origin: 0% 0%;
     transition: transform 0.2s cubic-bezier(0.77,0.2,0.05,1.0);
+    &-item{
+        overflow-x: hidden;
+    }
+    &-item::before {
+        content: ' ';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        transform: translateX(-120%);
+        background-color: #FCBB25;
+    }
+    &-item:hover:before {
+        transform: translateX(-20%);
+    }
+    &-item:hover{
+        color: white;
+    }
 }
 .menu.on{
-    transform: translateX(0);
+    transform: translateX(0) !important;
 }
