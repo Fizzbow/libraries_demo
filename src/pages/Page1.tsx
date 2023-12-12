@@ -1,8 +1,6 @@
 import { useTranslation } from "react-i18next";
 import "./toggle.scss";
 
-const langs = ["fr", "en", "cn"];
-
 const languages = [
   {
     id: "en",
