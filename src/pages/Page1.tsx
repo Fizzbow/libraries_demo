@@ -32,7 +32,7 @@ const Page1 = () => {
       className="app-content flex flex-col h-full p-10"
       style={{ alignItems: "center" }}
     >
-      {/* <div className="absolute w-[50%] z[-1] rotate-12 h-[50%] bg-gradient-to-r from-yellow-200 via-pink-200 to-pink-400" /> */}
+      {/* <div className="absolute w-[50%] z[-1] rotate-12 h-[50%] bg-gradient-to-r from-yellow-200 via-pink-200 to-pink" /> */}
       <header className="flex mb-6 relative w-full flex-row-reverse items-center">
         <div
           className="toggle cursor-pointer flex flex-col"
@@ -41,21 +41,21 @@ const Page1 = () => {
           {["one", "two", "three"].map((cla) => {
             return (
               <div
-                className={`${cla} h-[5px] bg-blue-600 rounded-sm transition-all`}
+                className={`${cla} h-[5px] bg-blue rounded-sm transition-all`}
                 key={cla}
               />
             );
           })}
         </div>
       </header>
-      <div className="menu shadow-md bg-blue-600 rounded-bl-md">
+      <div className="menu shadow-md bg-blue rounded-bl-md">
         <div className="mt-20">
           {languages.map((i) => {
             const { name, id } = i;
             return (
               <div
                 key={id}
-                className="mx-4 text-3xl font-bold my-2 cursor-pointer text-white hover:bg-yellow-200"
+                className="mx-4 text-3xl font-bold my-2 cursor-pointer text-white hover:bg-[#FCBB25]"
                 onClick={() => {
                   i18n.changeLanguage(id), toggle();
                 }}
@@ -69,17 +69,15 @@ const Page1 = () => {
 
       <section className="w-[800px] flex-1">
         <div>
-          <span className="text-blue-600"> language now：</span>
-          <span className="text-yellow-400 font-bold text-xl">
+          <span className="text-blue"> language now：</span>
+          <span className="text-yellow font-bold text-xl">
             {" "}
             {i18n.language}
           </span>
         </div>
 
-        <div className="font-bold text-4xl text-gray-600 mb-3">
-          {t("header")}
-        </div>
-        <div className="font-bold text-3xl text-gray-600 mb-3">
+        <div className="font-bold text-4xl text-gray mb-3">{t("header")}</div>
+        <div className="font-bold text-3xl text-gray mb-3">
           {t("part1.subTitle")}
         </div>
 
