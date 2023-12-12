@@ -57,7 +57,7 @@ const Page1 = () => {
             return (
               <div
                 key={id}
-                className="mx-2 text-3xl font-bold my-2 cursor-pointer text-white hover:bg-yellow-200"
+                className="mx-4 text-3xl font-bold my-2 cursor-pointer text-white hover:bg-yellow-200"
                 onClick={() => {
                   i18n.changeLanguage(id), toggle();
                 }}
