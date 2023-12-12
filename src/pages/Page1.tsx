@@ -23,8 +23,10 @@ const Page1 = () => {
 
   function toggle() {
     const toggle = document.querySelector(".toggle");
+    const menu = document.querySelector(".menu");
 
     toggle?.classList.toggle("on");
+    menu?.classList.toggle("on");
   }
 
   return (
@@ -32,6 +34,7 @@ const Page1 = () => {
       className="app-content flex flex-col h-full p-10"
       style={{ alignItems: "center" }}
     >
+      {/* <div className="absolute w-[50%] z[-1] rotate-12 h-[50%] bg-gradient-to-r from-yellow-200 via-pink-200 to-pink-400" /> */}
       <header className="flex mb-6 relative w-full flex-row-reverse items-center">
         <div
           className="toggle cursor-pointer flex flex-col"
@@ -47,24 +50,29 @@ const Page1 = () => {
           })}
         </div>
       </header>
-      <div className="menu ">
-        {langs.map((i) => {
-          return (
-            <button
-              key={i}
-              className="mx-2"
-              onClick={() => i18n.changeLanguage(i)}
-            >
-              {i}
-            </button>
-          );
-        })}
+      <div className="menu shadow-md bg-blue-600 rounded-bl-md">
+        <div className="mt-20">
+          {languages.map((i) => {
+            const { name, id } = i;
+            return (
+              <div
+                key={id}
+                className="mx-2 text-3xl font-bold my-2 cursor-pointer text-white hover:bg-yellow-200"
+                onClick={() => {
+                  i18n.changeLanguage(id), toggle();
+                }}
+              >
+                {name}
+              </div>
+            );
+          })}
+        </div>
       </div>
 
       <section className="w-[800px] flex-1">
         <div>
           <span className="text-blue-600"> language now：</span>
-          <span className="text-amber-600 font-bold text-xl">
+          <span className="text-yellow-400 font-bold text-xl">
             {" "}
             {i18n.language}
           </span>
