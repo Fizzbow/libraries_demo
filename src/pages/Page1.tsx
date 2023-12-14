@@ -48,14 +48,14 @@ const Page1 = () => {
           })}
         </div>
       </header>
-      <div className="menu shadow-md bg-blue rounded-bl-md">
+      <div className="menu shadow-md bg-blue  rounded-bl-md">
         <div className="mt-20">
           {languages.map((i) => {
             const { name, id } = i;
             return (
               <div
                 key={id}
-                className="menu-item relative transition-colors  mx-4 text-3xl font-bold my-2 cursor-pointer text-grays"
+                className="menu-item p-2  relative transition-colors  mx-4 text-3xl font-bold my-2 cursor-pointer text-grays"
                 onClick={() => {
                   i18n.changeLanguage(id);
                 }}
@@ -73,14 +73,16 @@ const Page1 = () => {
           <span className="text-yellow font-bold text-xl">{i18n.language}</span>
         </div>
 
-        <div className="font-bold text-4xl text-gray mb-3">{t("header")}</div>
-        <div className="font-bold text-3xl text-gray mb-3">
+        <div className="font-bold text-4xl text-gray-700 mt-6">
+          {t("header")}
+        </div>
+        <div className="font-bold text-3xl text-gray-700 mb-3">
           {t("part1.subTitle")}
         </div>
 
         {(t("part1.details", { returnObjects: true }) as string[]).map((i) => {
           return (
-            <div key={i} className="my-1">
+            <div key={i} className="my-1 text-gray-500">
               {i}
             </div>
           );
